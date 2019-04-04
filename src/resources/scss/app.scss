@@ -1,1 +1,8 @@
-body { display: block; }
+@import "settings/colors";
+@import "settings/fonts";
+@import "settings/layout";
+@import "~vuetify/dist/vuetify.min.css";
+
+// layout
+@import "layout/header";
+@import "layout/nav";

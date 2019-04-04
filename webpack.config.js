@@ -1,13 +1,23 @@
 const path = require('path');
+const { HotModuleReplacementPlugin } = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Vue = require('vue');
+
+const environment = process.env.NODE_ENV;
 
 module.exports = {
-    entry: './src/resources/js/app.js',
+    mode: environment,
+    entry: ['webpack-hot-middleware/client', './src/resources/js/app.js'],
     output: {
-        filename: 'build.js',
+        filename: 'js/build.js',
         path: path.resolve(__dirname, 'src/public')
+    },
+    resolve: {
+        alias: {
+            'vue$': path.resolve(__dirname, 'node_modules/vue/dist/vue.js')
+        }
     },
     module: {
         rules: [
@@ -17,17 +27,25 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [
+                use: environment === 'development' ? [
+                    'style-loader',
+                    'css-loader', 'sass-loader'
+                ] : [
                     { loader: MiniCssExtractPlugin.loader },
                     'css-loader', 'sass-loader'
                 ]
+            },
+            {
+                test: /\.(png|jpg|svg)$/,
+                loader: 'url-loader'
             }
         ]
     },
     plugins: [
         new VueLoaderPlugin(),
+        new HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "css/app.css",
             chunkFilename: "[id].css"
         }),
         new CopyWebpackPlugin([

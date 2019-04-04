@@ -1,0 +1,92 @@
+.nav {
+  width: 115px; height: 115px;
+  background: url('/img/mobile-nav-bg.svg') no-repeat;
+
+  &__mobile-trigger {
+    margin: 20px 0 0 45px;
+    background: none; box-shadow: none;
+    font-size: 2rem; text-align: center;
+    min-width: auto; padding: 5px 10px; height: 48px;
+
+    &.v-btn:not(.v-btn--icon):not(.v-btn--flat) {
+      background: none; color: $light-color; box-shadow: none; cursor: pointer;
+    }
+  }
+
+  &__content {
+    position: absolute; top: 0; right: -100%; bottom: 0; width: 100%; transition: .2s all ease-in-out;
+    background: $default-bg-color; z-index: 10; box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+
+    &--active {
+      right: 0;
+    }
+  }
+
+  &__mobile-close {
+    text-align: right;
+    &__btn {
+      min-width: 30px; font-size: 1.16rem;
+    }
+  }
+
+  &__list {
+    list-style: none; padding: 0;
+    &__item {
+      border-left: 5px solid $secondary-bg-color; transition: .2s all ease-in-out;
+      &--active { font-weight: bold; }
+      &--active, &:hover {
+        border-left: 5px solid $primary-color;
+      }
+    }
+  }
+
+  &__link {
+    color: $dark-color; text-decoration: none; display: block;
+    padding: 15px 15px; transition: .2s all ease-in-out;
+    &:hover { background: $light-color; padding-left: 25px; }
+  }
+
+  @media (min-width: 768px) {
+    width: initial; height: initial; background: none;
+    font-size: 1.125rem; margin-right: 18%;
+
+    &__mobile-trigger { display: none; }
+    &__mobile-close { display: none; }
+    &__content {
+      transition: none; position: static; background: none; box-shadow: none;
+    }
+    &__list {
+      display: flex; margin-top: 45px;
+
+      &__item {
+        border: none;
+        &:hover {
+          border: none;
+        }
+      }
+    }
+
+    &__link {
+      transition: .2s all ease-in-out;
+
+      &:hover {
+        padding-left: 15px; background: none;
+        color: $primary-color;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin-right: 255px;
+  }
+
+  @media (min-width: 1280px) {
+    &__list {
+      margin-top: 60px;
+    }
+
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+}

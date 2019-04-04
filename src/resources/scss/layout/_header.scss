@@ -1,0 +1,42 @@
+.app-header {
+  max-width: 1530px; margin: 0 auto;
+  display: flex; justify-content: space-between;
+
+  &__logo {
+    margin: 25px;
+  }
+  &__logo-image {
+    width: 160px;
+
+    &--symbol {
+      width: 50px; display: none;
+    }
+  }
+  
+  @media(min-width: 768px) {
+    &__logo {
+      margin: 48px;
+    }
+    &__logo-image {
+      display: none;
+      &--symbol {
+        display: block;
+      }
+    }
+  }
+  
+  @media(min-width: 1024px) {
+    &__logo-image {
+      display: block; width: 177px;
+      &--symbol {
+        display: none;
+      }
+    }
+  }
+
+  @media(min-width: 1280px) {
+    &__logo-image {
+      width: 325px;
+    }
+  }
+}
