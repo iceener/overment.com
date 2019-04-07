@@ -1,6 +1,6 @@
 .app-header {
-  max-width: 1530px; margin: 0 auto;
   display: flex; justify-content: space-between;
+  padding: 0;
 
   &__logo {
     margin: 25px;
@@ -15,7 +15,7 @@
   
   @media(min-width: 768px) {
     &__logo {
-      margin: 48px;
+      margin: 48px 0 0;
     }
     &__logo-image {
       display: none;

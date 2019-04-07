@@ -1,5 +1,67 @@
 extends ../layout
 
 block content
-    div#app
-        // | Hello moto
+    .container
+        .home-intro
+            h1.header-text just keep 
+                span.color-em learning!
+            p.text.home-intro__text
+                | Chcesz rozwinąć umiejętności lub poznać nową technologię? 
+                span.break Znajdziesz tu krótkie i zwięzłe filmy w których mówię o tym, co warto wiedzieć.
+            .newsletter
+                v-form.newsletter-form
+                    v-container
+                        v-layout
+                            v-text-field(placeholder="Podasz mi swój adres e-mail?")
+                            v-btn.newsletter-form__submit.primary-btn Zapisz mnie
+                        p.text Dołącz do 8 000 programistów takich jak Ty! Im też nie wysyłam spamu.
+    
+    .section.cards-section
+        .container
+            h2.section-title Serie filmów 
+                br 
+                span.color-em #bezZbędnegoGadania
+
+            .cards
+                .card
+                    a.card__content(href="#")
+                        .card__icon 
+                            img(src="/img/git.png")
+                        .card__title Git
+                        .card__details 14 filmów | 01:04:00
+
+                .card
+                    a.card__content(href="#")
+                        .card__icon 
+                            img(src="/img/rest.png")
+                        .card__title REST API
+                        .card__details 14 filmów | 01:04:00
+
+                .card
+                    a.card__content(href="#")
+                        .card__icon 
+                            img(src="/img/express.png")
+                        .card__title Express.js
+                        .card__details 14 filmów | 01:04:00
+            .actions
+                v-btn(href="#").btn.btn--dark.v-btn--flat Zobacz więcej
+
+    .section.mission-section
+        .container 
+            h2.section-title Content is King. Nope!
+                br 
+                span.color-em Quality Content 
+                | is.
+            p.text Tworząc filmy najwyższą wartością jest dla mnie Twój czas.
+                | Moja strategia polega na tym, aby dotrzeć do źródła tematu i świadomie
+                | odrzucić niepotrzebne elementy. W ten sposób w prostych słowach 
+                | wyjaśniam Ci to, co jest naprawdę istotne.
+
+            v-divider
+
+            p.text.text--subscribe
+                strong Ma to dla Ciebie sens? Subskrybuj!
+                br
+                | Premiery filmów w każdy poniedziałek o 18:00.
+            .subscribe-btn
+                .g-ytsubscribe(data-channelid="UC_MIaHmSkt9JHNZfQ_gUmrg" data-layout="default" data-count="default")

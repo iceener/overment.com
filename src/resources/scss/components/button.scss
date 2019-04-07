@@ -1,0 +1,7 @@
+.v-btn.btn {
+    &--primary {}
+    &--secondardy {}
+    &--dark:not(.v-btn--icon) { 
+      background: $dark-color; color: $light-color; 
+    }
+}

@@ -1,8 +1,19 @@
 @import "settings/colors";
 @import "settings/fonts";
+@import "settings/typography";
 @import "settings/layout";
 @import "~vuetify/dist/vuetify.min.css";
 
 // layout
 @import "layout/header";
+@import "layout/footer";
 @import "layout/nav";
+@import "layout/section";
+
+// components 
+@import "components/button";
+@import "components/newsletter";
+@import "components/subscription";
+
+// home page
+@import "pages/home";

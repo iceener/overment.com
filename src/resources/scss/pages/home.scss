@@ -1,0 +1,134 @@
+.home-intro {
+  margin-top: 20px;
+
+  .header-text { margin-top: 0; }
+  &__text { margin: 25px 0; }
+}
+
+// cards section
+.cards-section {
+  
+  .cards {
+    margin-top: 35px; display: flex; flex-direction: column; align-items: center;
+    .card { 
+      display: flex; justify-content: center; align-items: center; height: 245px; background: #fafafa; text-align: center;
+      width: 275px; margin-bottom: 30px;
+
+      &__content { text-decoration: none; color: $text-color; display: block; width: 100%; }
+      &__icon { margin-bottom: 30px; transition: .2s all ease-in-out; 
+        img { max-width: 100px; }
+      }
+      &__title { font-size: 1.5rem; margin-bottom: 15px; }
+      &__details { font-size: 1rem; color: rgba(0,0,0,.5) }
+
+      &:hover, &__content:focus {
+        outline: none;
+        .card__icon { transform: scale(1.1); }
+      }
+    }
+  }
+
+  .actions { 
+    display: flex; justify-content: center; margin: 50px 0 0;
+
+    .btn { font-size: .92rem; width: 230px; height: 48px; border-radius: 5px; }
+  }
+}
+
+// mission section
+.mission-section {
+  position: relative; margin-top: 100px; padding-top: 70px;
+  &:before { content: ''; display: block; position: absolute; left: 0; right: 0; background: url('/img/section-wave-mobile.svg') no-repeat; background-size: 100%; height: 160px; top: -100px; }
+
+  .text { max-width: 820px; margin: 0 auto 60px; text-align: center; 
+    &--subscribe { margin-top: 100px; margin-bottom: 20px; }
+  }
+  .v-divider { max-width: 820px; margin: 0 auto; }
+}
+
+@media (min-width: 520px) {
+  .mission-section {
+    margin-top: 200px; padding-top: 70px;
+    &:before { height: 230px; top: -230px; }
+  }
+}
+
+@media (min-width: 768px) {
+  .home-intro {
+    margin-top: 156px;
+
+    &__text { margin: 20px 0; max-width: 550px; }
+  }
+
+  .cards-section { 
+    .cards {
+      display: flex; justify-content: space-around; flex-direction: row; align-items: initial;
+
+      .card {
+        width: 240px; height: 240px;
+        &__icon {
+          img { max-width: 90px }
+        }
+        &__title { font-size: 1.5rem; }
+        &__details { font-size: .92rem; }
+      }
+    }
+
+    .actions {
+      .btn { font-size: 1.16rem; height: 54px; width: 240px; }
+    }
+  }
+
+  .mission-section {
+    margin-top: 300px; padding-top: 70px;
+    &:before { height: 320px; top: -320px; }
+  }
+}
+
+@media (min-width: 1024px) {
+  .mission-section {
+    &:before { height: 375px; top: -350px; }
+  }
+}
+
+@media (min-width: 1280px) {
+  .home-intro {
+    &__text {
+      max-width: none; 
+      .break { display: block; }
+    }
+
+    .cards-section {
+      .actions {
+        .btn { font-size: 1.5rem; height: 72px; width: 340px; }
+      }
+    }
+  }
+
+  .cards-section {
+    .cards {
+      .card {
+        width: 350px; height: 360px;
+        
+        &__icon {
+          img { max-width: 120px }
+        }
+        &__title { font-size: 2rem; }
+        &__details { font-size: 1.25rem; }
+      }
+    }
+  }
+
+  .mission-section {
+    margin-top: 400px; padding-top: 140px;
+    &:before { background: url('/img/section-wave.svg') no-repeat; height: 450px; top: -450px; }
+  }
+}
+
+@media(min-width: 1920px) {
+  .home-intro {
+    &__text {
+      max-width: 40px 0;
+    }
+  }
+}

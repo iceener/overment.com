@@ -1,0 +1,21 @@
+.header-text { font-size: 3.75rem; font-weight: 100; text-align: center; }
+.section-title { font-size: 2rem; font-weight: 100; text-align: center; margin-bottom: 20px; }
+.text { font-size: 1.125rem; font-weight: 100; color: rgba(0,0,0,.7); text-align: center; line-height: 28px; }
+.color-em { color: $primary-color; }
+
+@media (min-width: 768px) {
+  .header-text { font-size: 3rem; text-align: left; }
+  .section-title { font-size: 3rem; margin-bottom: 40px; }
+  .text { font-size: 1.16rem; text-align: left; line-height: 38px;  }
+}
+
+@media (min-width: 1280px) {
+  .header-text { font-size: 4rem; }
+  .section-title { font-size: 4rem; }
+}
+
+@media (min-width: 1920px) {
+  .header-text { font-size: 6rem; }
+  .section-title { margin-bottom: 80px; }
+  .text { font-size: 1.5rem; }
+}
