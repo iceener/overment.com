@@ -1,8 +1,10 @@
 .home-intro {
-  margin-top: 20px;
+  margin-top: 20px; margin: 20px auto;
+  text-align: center;
 
   .header-text { margin-top: 0; }
   &__text { margin: 25px 0; }
+  .btn { margin-top: 20px; }
 }
 
 // cards section
@@ -55,9 +57,10 @@
 
 @media (min-width: 768px) {
   .home-intro {
-    margin-top: 156px;
+    margin-top: 125px;
 
-    &__text { margin: 20px 0; max-width: 550px; }
+    .header-text { text-align: center; }
+    &__text { margin: 20px auto; max-width: 550px; text-align: center; }
   }
 
   .cards-section { 

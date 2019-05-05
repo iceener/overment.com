@@ -1,21 +1,18 @@
 // newsletter
 .newsletter {
   .newsletter-form {
-    max-width: 600px;
-    .container { padding: 0; }
-    input { min-height: 64px; padding: 0 25px; border: 1px solid #ddd; border-radius: 8px 0 0 8px; font-size: .86rem; }
-    .v-input { padding-top: 0; }
-    .v-input__slot:after, .v-input__slot:before { display: none; }
-    &__submit:not(.v-btn--icon):not(.v-btn--flat) { background: #5D30C1; color: #fff; min-height: 64px; border-radius: 0 8px 8px 0; font-size: .86rem; margin: 4px 0 0 0; }
+    max-width: 600px; margin: 0 auto; text-align: center;
+    &__input { min-height: 64px; padding: 0 25px; border: 1px solid #ddd; border-radius: 8px 0 0 8px; font-size: .86rem; }
+    &__submit { background: #5D30C1; color: #fff; min-height: 64px; border-radius: 0 8px 8px 0; font-size: .86rem; margin: 4px 0 0 0; }
+    .text { text-align: center; padding-top: 20px; font-size: 1rem; }
   }
 }
 
 @media (min-width: 768px) {
   .newsletter {
     .newsletter-form {
-      input { font-size: 1.24rem; min-height: 60px; }
-      .v-input { margin-top: 20px; }
-      &__submit:not(.v-btn--icon):not(.v-btn--flat) { font-size: 1.24rem; width: 225px; min-height: 60px; margin: 20px 0 0 0; }
+      &__input { font-size: 1.24rem; min-height: 60px; }
+      &__submit { font-size: 1.24rem; width: 225px; min-height: 60px; margin: 20px 0 0 0; }
     }
   }
 }
@@ -24,9 +21,8 @@
   .newsletter {
     .newsletter-form {
       max-width: 865px;
-      input { font-size: 1.625rem; min-height: 89px; }
-      .v-input { margin-top: 20px; }
-      &__submit:not(.v-btn--icon):not(.v-btn--flat) { font-size: 1.625rem; width: 225px; min-height: 89px; margin: 20px 0 0 0; }
+      &__input { font-size: 1.625rem; min-height: 89px; }
+      &__submit { font-size: 1.625rem; width: 225px; min-height: 89px; margin: 20px 0 0 0; }
     }
   }
 }

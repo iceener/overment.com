@@ -5,7 +5,7 @@
   .text { font-size: 1rem; text-align: center; }
   .social-media {
     display: flex; justify-content: center;
-    .media { font-size: 1.5rem; color: $accent-color; margin: 5px 15px 15px; display: block; transition: .2s all ease-in-out;
+    .media { font-size: 1.5rem; color: #999; margin: 5px 15px 15px; display: block; transition: .2s all ease-in-out;
       &:hover, &:focus { transform: scale(1.2); outline: none; color: $primary-color; }
     }
   }
@@ -13,9 +13,9 @@
 
 @media(min-width: 768px) {
   .app-footer {
-    .text { font-size: 1.5rem; }
+    .text { font-size: 1rem; }
     .social-media {
-      .media { font-size: 2.625rem; margin: 20px 30px 30px; }
+      .media { font-size: 2.625rem; margin: 0 30px 10px; }
     }
   }
 }

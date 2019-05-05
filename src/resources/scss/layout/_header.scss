@@ -1,5 +1,5 @@
 .app-header {
-  display: flex; justify-content: space-between;
+  display: flex; justify-content: center;
   padding: 0;
 
   &__logo {
@@ -35,6 +35,7 @@
   }
 
   @media(min-width: 1280px) {
+    &__logo { position: relative; top: 70px;}
     &__logo-image {
       width: 325px;
     }

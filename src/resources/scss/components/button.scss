@@ -1,7 +1,9 @@
-.v-btn.btn {
-    &--primary {}
-    &--secondardy {}
-    &--dark:not(.v-btn--icon) { 
+.btn {
+    min-height: 64px; font-size: .86rem; margin: 4px 0 0 0;
+    display: inline-block; min-width: 240px; text-align: center; text-decoration: none; height: 64px; line-height: 64px; border-radius: 8px; font-size: 1.16rem; text-transform: uppercase; font-weight: $font-bold;
+    &--primary { background: $accent-color; color: $light-color; }
+    &--secondary { background: $primary-color; color: $light-color;}
+    &--dark { 
       background: $dark-color; color: $light-color; 
     }
 }
