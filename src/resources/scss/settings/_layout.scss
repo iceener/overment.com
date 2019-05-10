@@ -3,15 +3,27 @@ body { font-size: 1rem; background: $default-bg-color; font-family: $font-defaul
 
 .container { max-width: 1530px; }
 
-@media(min-width: 768px) {
+@media(min-width: 960px) {
   body {
     background: url('/img/gradient-right.svg') 100% 0 no-repeat;
-    background-size: 30%;
+    background-size: 28%;
   }
 }
 
 @media (min-width: 1280px) {
   body {
-    background-size: 350px 1145px;
+    background-size: 310px 1145px; background-position-y: -150px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: 375px 1145px;
+  }
+}
+
+@media (min-width: 1919px) {
+  body { 
+    background-size: 400px 1145px; background-position-y: 0;
   }
 }
