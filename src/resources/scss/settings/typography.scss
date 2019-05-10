@@ -1,7 +1,15 @@
 .header-text { font-size: 3.75rem; font-weight: 100; text-align: center; }
-.section-title { font-size: 2rem; font-weight: 100; text-align: center; margin-bottom: 20px; }
+.section-title { font-size: 1.5rem; font-weight: 100; text-align: center; margin-bottom: 20px; }
 .text { font-size: 1.125rem; font-weight: 100; color: rgba(0,0,0,.7); text-align: center; line-height: 28px; }
 .color-em { color: $primary-color; }
+
+@media (min-width: 320px) {
+
+}
+
+@media (min-width: 480px) {
+  .section-title { font-size: 1.75rem; }
+}
 
 @media (min-width: 768px) {
   .header-text { font-size: 3rem; text-align: left; }

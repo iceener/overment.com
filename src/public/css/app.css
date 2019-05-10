@@ -95,6 +95,9 @@ body {
       .app-header__logo-image--symbol {
         display: none; } }
   @media (min-width: 1280px) {
+    .app-header__logo {
+      position: relative;
+      top: 70px; }
     .app-header__logo-image {
       width: 325px; } }
 
